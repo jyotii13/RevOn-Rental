@@ -1,0 +1,44 @@
+.container{
+    max-width: 600px;
+    margin: 150px auto 0; 
+}
+.title{
+    color: #6B2667;
+    font-size: 24px;
+}
+.notification{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.notification h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.notification p{
+    margin-bottom: 10px;
+}
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.view-details{
+    background-color: #6B2667;
+    color: white;
+    margin-right: 10px;
+    border: none;
+}
+.respond{
+    background-color: #6B2667;
+    color: white;
+    border: none;
+}

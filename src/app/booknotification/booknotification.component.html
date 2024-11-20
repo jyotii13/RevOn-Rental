@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Notification</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title" >New Booking Notification</h2>
+        <div class="notification" *ngFor="let booking of bookings">
+            <h3>Booking Request: {{booking.type }}</h3>
+            <p>Start Date: {{ booking.startDate }}</p>
+            <p>Start Date: {{ booking.duration }} days</p>
+            <div class="button-container">
+                <button class="view-details">View Details</button>
+                <button class="respond">Respond</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.widget {
+  background: #f8f9fa; /* Light gray background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 350px; /* Set the height to a slightly larger value */
+  overflow: hidden; /* Prevent content overflow */
+}
+.widget1 {
+  background: #f8f9fa; /* Light gray background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 250px; /* Set the height to a slightly larger value */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.widget1-scrollable {
+  height: 250px; /* Inner scrolling container height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container-fluid {
+  margin-top: 10vh;
+  padding: 0 15px; /* Small gap on both sides */
+}
+
+body {
+  background-color: #eef2f7; /* Subtle background for the dashboard */
+}

@@ -1,0 +1,40 @@
+
+.hero-container {
+    background-image: url('/assets/images/bluecar.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2% 5%;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+  }
+  
+  .highlight {
+    color: #d35bff;
+  }
+  
+  .sign-up-btn {
+    background-color: #6B2667;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: rgb(172, 42, 193);
+  }

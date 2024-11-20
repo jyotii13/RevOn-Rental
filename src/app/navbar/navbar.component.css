@@ -1,0 +1,642 @@
+/* General Reset and Styling
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --text-color: #0B2154;  /* Dark blue text color 
+    --primary-color: #863884;  /* Deep purple 
+    --secondary-color: #6A1B9A;  /* Light purple 
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5rem;
+}
+
+/* Custom Navbar Styling 
+.navbar {
+    background-color: #eeeff1 !important; /* Light background color for navbar 
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px; /* More padding for better alignment 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusted Logo Styling 
+.logo {
+    height: 70px; /* Increase logo height for better visibility 
+    margin-right: 20px; /* Adds space between logo and nav items 
+}
+
+/* Navbar Link Styling 
+.navbar .nav-link {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+
+ .nav-link a {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    color: var(--text-color) !important;
+    font-weight: bold !important;
+    text-decoration: none !important; 
+    transition: color 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Hamburger Icon for Mobile View 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* Search Icon Styling 
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color) !important;
+    font-size: 1.7rem; /* Increased size for better visibility 
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.search-btn:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Profile Icon Button Style 
+.profile-icon-btn {
+    background: var(--primary-color) !important;
+    color: white !important;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.profile-icon-btn:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Signup and Login Button Styling 
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-outline-secondary {
+    border: 2px solid var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+    font-weight: 400;
+    padding: 9px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* User Profile Modal Backdrop 
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* User Profile Modal Content 
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.5s ease-out;
+    color: var(--text-color);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.modal-header h5 {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: var(--primary-color);
+    gap: 10px;
+    margin: 0;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--text-color);
+}
+
+.modal-body {
+    margin-top: 20px;
+    padding: 0 20px;
+    color: var(--text-color);
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.modal-body p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 15px 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.modal-body p strong {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 25px;
+    color: var(--text-color);
+}
+
+.btn-edit {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-edit:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+.btn-cancel {
+    background-color: #aaa !important;
+    color: white !important;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: none !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-cancel:hover {
+    background-color: #888 !important;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} 
+
+/* /* General Reset and Styling  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+   --text-color: #0B2154;  /* Dark blue text color  */
+  --primary-color: #863884;  /* Deep purple */
+  --secondary-color: #6A1B9A;  /* Light purple */
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5rem;
+}
+
+/* Custom Navbar Styling */
+.navbar {
+  background-color: #eeeff1 !important; /* Light background color for navbar */
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 15px 40px; /* More padding for better alignment */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusted Logo Styling */
+.logo {
+  height: 60px; /* Increase logo height for better visibility */
+  margin-right: 20px; /* Adds space between logo and nav items */
+}
+
+/* Navbar Link Styling */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  color: var(--text-color) !important; /* Ensure color is applied */
+  font-weight: 600 !important; /* Ensure text is bold */
+  transition: color 0.3s ease;
+  text-decoration: none !important; /* Remove any default underline */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--secondary-color) !important; /* Ensure hover color is applied */
+}
+
+/* Hamburger Icon for Mobile View */
+/* Hamburger Icon for Mobile View */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .hamburger {
+        display: block;
+        
+    }
+    .navbar-collapse.show {
+      background-color: #eeeff1 !important; /* Set background color to white when expanded */
+  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+}
+/* .navbar-toggler {
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      height: 90px;
+      align-items: flex-start;
+      background-color: #eeeff1 !important;
+  }
+  .navbar-toggler {
+      display: block;
+  }
+  .navbar-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+      margin-top: 10px;
+  }
+  .navbar-nav.show {
+      display: flex;
+  }
+} */
+
+/* Search Icon Styling */
+.nav-actions .search-btn {
+  margin-right: 15px;
+  background: none;
+  border: none;
+  color: var(--primary-color) !important;
+  font-size: 1.7rem; /* Increased size for better visibility */
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.nav-actions .search-btn:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Profile Icon Button Style */
+.nav-actions .profile-icon-btn {
+  background: var(--primary-color) !important;
+  color: white !important;
+  font-size: 20px;
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-actions .profile-icon-btn:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+/* Signup and Login Button Styling */
+.nav-actions .custom-btn {
+  margin-right: 15px;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-actions .custom-btn:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+.nav-actions .btn-outline-secondary {
+  /* margin-left: 20px; */
+  border: 2px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 400;
+  padding: 9px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-actions .btn-outline-secondary:hover {
+  background-color: var(--secondary-color) !important;
+  color: white !important;
+}
+.nav-actions .btn-outline-secondary:focus{
+  outline: 1px solid var(--primary-color);
+}
+
+.nav-actions .custom-btn:focus{
+  outline: 1px solid var(--primary-color);
+}
+
+/* User Profile Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* User Profile Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  animation: slideDown 0.5s ease-out;
+  color: var(--text-color);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.modal-header h5 {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: var(--primary-color);
+  gap: 10px;
+  margin: 0;
+}
+
+
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: var(--text-color);
+}
+
+.modal-body {
+  margin-top: 20px;
+  padding: 0 20px;
+  color: var(--text-color);
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.modal-body p {
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 15px 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.modal-body p strong {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  margin-top: 25px;
+  color: var(--text-color);
+}
+
+.btn-edit {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-edit:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+.btn-cancel {
+  background-color: #aaa !important;
+  color: white !important;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-cancel:hover {
+  background-color: #888 !important;
+}
+
+@keyframes slideDown {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  
+}
+
+
